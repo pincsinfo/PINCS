@@ -39,7 +39,7 @@ a {
 
 /* Utilities */
 .nowrap {
-  white-space: nowrap;
+  white-space: normal; /* allow wrapping so words never get cut off */
 }
 
 /* Layout */
@@ -344,7 +344,7 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 920px) {
+@media (max-width: 1024px) {
   .auth {
     grid-template-columns: 1fr;
   }
@@ -370,6 +370,11 @@ a {
   .form-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  /* Allow headings to wrap nicely on very small screens */
+  .nowrap {
+    white-space: normal;
   }
 }
 
@@ -414,7 +419,7 @@ a {
 
 /* Utilities */
 .nowrap {
-  white-space: nowrap;
+  white-space: normal; /* allow wrapping so words never get cut off */
 }
 
 /* Layout */
@@ -718,7 +723,7 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 920px) {
+@media (max-width: 1024px) {
   .auth {
     grid-template-columns: 1fr;
   }
@@ -744,6 +749,13 @@ a {
   .form-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* Extra safety: ensure long hero text wraps nicely on very small screens */
+@media (max-width: 520px) {
+  .auth-title .nowrap {
+    white-space: normal;
   }
 }
 

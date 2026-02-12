@@ -39,7 +39,7 @@ a {
 
 /* Utilities */
 .nowrap {
-  white-space: nowrap;
+  white-space: normal; /* allow wrapping so words never get cut off */
 }
 
 .auth {
@@ -329,7 +329,7 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 920px) {
+@media (max-width: 1024px) {
   .auth {
     grid-template-columns: 1fr;
   }
@@ -350,6 +350,11 @@ a {
 
   .auth-right-inner {
     width: min(520px, 100% - 32px);
+  }
+
+  /* Let long hero words wrap on narrow phones */
+  .auth-title .nowrap {
+    white-space: normal;
   }
 }
 

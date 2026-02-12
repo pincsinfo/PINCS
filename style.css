@@ -756,7 +756,7 @@ a {
    -------------- */
 .use-cases {
   position: relative;
-  padding: 80px 0 100px;
+  padding: 40px 0 100px;
   background: linear-gradient(
     to bottom,
     #ffffff 0%,
@@ -819,10 +819,61 @@ a {
 
 .use-cases-lead {
   max-width: 600px;
-  margin: 0 auto 56px;
+  margin: 0 auto 32px;
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
+}
+
+/* Scrolling logos */
+.use-cases-logos-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 0 48px;
+  padding: 24px 0;
+}
+
+.use-cases-logos-scroll {
+  display: flex;
+  width: max-content;
+  animation: use-cases-logos-scroll 30s linear infinite;
+}
+
+.use-cases-logos-scroll:hover {
+  animation-play-state: paused;
+}
+
+.use-cases-logos-track {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+.use-cases-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: grayscale(20%);
+  opacity: 0.9;
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.use-cases-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes use-cases-logos-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .use-cases-grid {
@@ -1229,7 +1280,7 @@ a {
   }
 
   .use-cases {
-    padding: 60px 0 80px;
+    padding: 32px 0 80px;
   }
 
   .use-cases-grid {
@@ -1275,6 +1326,20 @@ a {
 
   .use-cases-title {
     font-size: 1.75rem;
+  }
+
+  .use-cases-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .use-cases-logos-track {
+    gap: 32px;
+  }
+
+  .use-cases-logos-wrapper {
+    margin: 0 0 40px;
+    padding: 20px 0;
   }
 }
 
