@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pincs Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="logo">
+          <img src="./images/logo.png" alt="PINCS logo" class="logo-img" />
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="navbar" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a class="btn btn-outline" href="signin.html">Sign In</a>
+            <a class="btn btn-primary" href="signup.html">Sign Up</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1 class="hero-title">
+            Universal <span class="hero-title-accent">PINCS Code</span><br />
+            for Address
+          </h1>
+          <p class="hero-subtitle">
+            Generate a unique PINCS code from any address or map location for
+            faster delivery and easy sharing.
+          </p>
+          <button class="btn btn-hero">Create PINCS</button>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="about-bg" aria-hidden="true"></div>
+        <div class="container about-inner">
+          <p class="about-tagline">
+            <span class="about-tagline-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </span>
+            Smart Address Solution
+          </p>
+          <h2 class="about-title">About <span class="about-title-accent">PINCS</span></h2>
+          <p class="about-lead">
+            PINCS converts long addresses into a <span class="about-lead-accent">short unique code</span> that can be used anywhere.
+          </p>
+          <div class="about-cards">
+            <article class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <h3 class="about-card-title">Shortened Address Code</h3>
+              <p class="about-card-desc">Transform lengthy, complex addresses into simple, memorable codes that are easy to share and remember.</p>
+            </article>
+            <article class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <h3 class="about-card-title">Reduce Address Confusion</h3>
+              <p class="about-card-desc">Eliminate errors from mistyped or misunderstood addresses, ensuring accurate delivery every time.</p>
+            </article>
+            <article class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h3 class="about-card-title">Universal Application</h3>
+              <p class="about-card-desc">Perfect for deliveries, e-commerce platforms, mobile apps, and any service that needs location data.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container features-inner">
+          <p class="features-tagline">
+            <span class="features-tagline-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.5-6.3 4.5 2.3-7-6-4.6h7.6z"/></svg>
+            </span>
+            Powerful Features
+          </p>
+          <h2 class="features-title">Everything You Need in <span class="features-title-accent">One Place</span></h2>
+          <p class="features-lead">Discover the powerful features that make PINCS the ultimate address solution.</p>
+          <div class="features-grid">
+            <article class="feature-card">
+              <div class="feature-card-icon-wrap">
+                <div class="feature-card-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+              </div>
+              <h3 class="feature-card-title">Generate Code from Map Location</h3>
+              <p class="feature-card-desc">Instantly convert any map location and address into a unique PINCS code with just one click.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card-icon-wrap">
+                <div class="feature-card-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+              </div>
+              <h3 class="feature-card-title">Faster Delivery Process</h3>
+              <p class="feature-card-desc">Speed up your delivery operations with accurate codes that eliminate address confusion and delays.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card-icon-wrap">
+                <div class="feature-card-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+              </div>
+              <h3 class="feature-card-title">Secure User Login</h3>
+              <p class="feature-card-desc">Protected authentication system ensures your PINCS codes and personal data remain safe and private.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card-icon-wrap">
+                <div class="feature-card-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </div>
+              </div>
+              <h3 class="feature-card-title">Easy to Copy and Share</h3>
+              <p class="feature-card-desc">Share your PINCS code effortlessly across any platform with one-tap copy and share functionality.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card-icon-wrap">
+                <div class="feature-card-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                </div>
+              </div>
+              <h3 class="feature-card-title">E-Commerce & Delivery Apps</h3>
+              <p class="feature-card-desc">Seamlessly integrate with popular e-commerce platforms and delivery applications for smooth operations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how-it-works">
+        <div class="how-it-works-bg" aria-hidden="true"></div>
+        <div class="container how-it-works-inner">
+          <p class="how-it-works-tagline">
+            <span class="how-it-works-tagline-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </span>
+            Simple Process
+          </p>
+          <h2 class="how-it-works-title">How It <span class="how-it-works-title-accent">Works</span></h2>
+          <p class="how-it-works-lead">Get your unique PINCS code in just 5 simple steps</p>
+          <div class="how-it-works-steps">
+            <article class="how-it-works-step">
+              <div class="how-it-works-step-icon-wrapper">
+                <div class="how-it-works-step-icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="M13 13l6 6"/></svg>
+                </div>
+              </div>
+              <h3 class="how-it-works-step-title">Click "Create PINCS"</h3>
+              <p class="how-it-works-step-desc">Hit the create PINCS button to open the create PINCS page</p>
+            </article>
+            <article class="how-it-works-step">
+              <div class="how-it-works-step-icon-wrapper">
+                <div class="how-it-works-step-icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+              </div>
+              <h3 class="how-it-works-step-title">Enter address and select location on map</h3>
+              <p class="how-it-works-step-desc">Type your full address or click on the map to pick the exact spot.</p>
+            </article>
+            <article class="how-it-works-step">
+              <div class="how-it-works-step-icon-wrapper">
+                <div class="how-it-works-step-icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="how-it-works-step-title">Click "Generate PINCS"</h3>
+              <p class="how-it-works-step-desc">Hit the button to generate your unique short code.</p>
+            </article>
+            <article class="how-it-works-step">
+              <div class="how-it-works-step-icon-wrapper">
+                <div class="how-it-works-step-icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+              </div>
+              <h3 class="how-it-works-step-title">PINCS code is generated</h3>
+              <p class="how-it-works-step-desc">Your code is ready to copy and share.</p>
+            </article>
+            <article class="how-it-works-step">
+              <div class="how-it-works-step-icon-wrapper">
+                <div class="how-it-works-step-icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                </div>
+              </div>
+              <h3 class="how-it-works-step-title">Use the code in multiple platforms</h3>
+              <p class="how-it-works-step-desc">Paste your PINCS code wherever you need to share your location.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="use-cases" class="use-cases">
+        <div class="use-cases-bg" aria-hidden="true"></div>
+        <div class="container use-cases-inner">
+          <p class="use-cases-tagline">
+            <span class="use-cases-tagline-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.5-6.3 4.5 2.3-7-6-4.6h7.6z"/></svg>
+            </span>
+            Real-World Applications
+          </p>
+          <h2 class="use-cases-title">Where You Can Use <span class="use-cases-title-accent">PINCS</span></h2>
+          <p class="use-cases-lead">From shopping to emergencies, PINCS works everywhere you need it.</p>
+          <div class="use-cases-grid">
+            <article class="use-case-card">
+              <div class="use-case-card-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"/>
+                  <circle cx="20" cy="21" r="1"/>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+              </div>
+              <h3 class="use-case-card-title">E-Commerce Platforms</h3>
+              <p class="use-case-card-desc">Simplify checkout with instant address entry using PINCS codes.</p>
+              <ul class="use-case-card-points">
+                <li>Faster checkout and fewer address typos</li>
+                <li>Perfect for marketplaces and retail apps</li>
+              </ul>
+            </article>
+
+            <article class="use-case-card">
+              <div class="use-case-card-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+                  <path d="M7 2v20"/>
+                  <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3v0a5 5 0 0 0 5-5z"/>
+                  <path d="M21 15v7"/>
+                </svg>
+              </div>
+              <h3 class="use-case-card-title">Food Delivery Services</h3>
+              <p class="use-case-card-desc">Get deliveries to the exact location with pinpoint accuracy using PINCS.</p>
+              <ul class="use-case-card-points">
+                <li>Pinpoint drop location for drivers</li>
+                <li>Share code instantly over chat or SMS</li>
+              </ul>
+            </article>
+
+            <article class="use-case-card">
+              <div class="use-case-card-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <h3 class="use-case-card-title">Courier Services</h3>
+              <p class="use-case-card-desc">Ensure packages reach the right destination every time with PINCS codes.</p>
+              <ul class="use-case-card-points">
+                <li>Reduce failed deliveries and re-attempts</li>
+                <li>More accurate pickup & drop instructions</li>
+              </ul>
+            </article>
+
+            <article class="use-case-card">
+              <div class="use-case-card-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <h3 class="use-case-card-title">Emergency Location Sharing</h3>
+              <p class="use-case-card-desc">Share your exact location instantly in emergencies with a simple PINCS code.</p>
+              <ul class="use-case-card-points">
+                <li>Send responders your exact spot quickly</li>
+                <li>Useful for travel, hikes, and disasters</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="site-footer" aria-label="Contact and legal information">
+        <div class="container footer-inner">
+          <div class="footer-grid">
+            <section class="footer-col" aria-labelledby="footer-contact-title">
+              <h3 id="footer-contact-title" class="footer-title">Contact Us</h3>
+              <ul class="footer-list">
+                <li><a class="footer-link" href="mailto:hi@pincs.in">hi@pincs.in</a></li>
+                <li>Address: D.No - 79, 04R, 16, Somlamma Temple Area, Syamala Nagar, Postal Colony, Gandhipuram, Rajamahendravaram, Andhra Pradesh 533103</li>
+                <!-- <li><a class="footer-link" href="tel:+11234567890">+1 (123) 456-7890</a></li> -->
+              </ul>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-follow-title">
+              <h3 id="footer-follow-title" class="footer-title">Follow Us</h3>
+              <div class="footer-social" aria-label="Social links">
+                <a class="footer-social-link" href="#" aria-label="Follow on Facebook">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.76l-.44 2.89h-2.32v6.99A10 10 0 0 0 22 12z"/></svg>
+                </a>
+                <a class="footer-social-link" href="#" aria-label="Follow on Twitter">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.4 2H21l-5.7 6.5L22 22h-6.2l-4.9-6.4L5.3 22H2.7l6.1-7L2 2h6.4l4.4 5.8L18.4 2zm-1.1 18h1.7L7.1 3.9H5.3L17.3 20z"/></svg>
+                </a>
+                <a class="footer-social-link" href="#" aria-label="Follow on LinkedIn">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7H9.32V9h3.41v1.56h.05c.47-.9 1.63-1.86 3.36-1.86 3.6 0 4.27 2.37 4.27 5.45v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                </a>
+                <a class="footer-social-link" href="#" aria-label="Follow on Instagram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5zM18 6.8a.7.7 0 1 1-.7-.7.7.7 0 0 1 .7.7z"/></svg>
+                </a>
+              </div>
+            </section>
+
+            <section class="footer-col footer-col-legal" aria-labelledby="footer-legal-title">
+              <h3 id="footer-legal-title" class="footer-title">Legal</h3>
+              <ul class="footer-list">
+                <li><a class="footer-link" href="#">Terms of Service</a></li>
+                <li><a class="footer-link" href="#">Privacy Policy</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="footer-divider" role="separator" aria-hidden="true"></div>
+          <p class="footer-bottom">
+            © <span data-current-year>2026</span> PINCS. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
