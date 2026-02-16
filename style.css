@@ -190,7 +190,8 @@ a {
 }
 
 .btn-hero {
-  margin-top: 40px;
+  display: inline-block;
+  margin-top: 0;
   padding-inline: 40px;
   padding-block: 14px;
   border-radius: 999px;
@@ -294,7 +295,9 @@ a {
   font-size: 1rem;
   max-width: 640px;
   margin-inline: auto;
+  margin-bottom: 32px;
   color: #333;
+  line-height: 1.65;
 }
 
 /* --------------

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create PINCS • PINCS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="create-pincs.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="./images/logo.png" alt="PINCS logo" class="logo-img" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="navbar" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#how-it-works">How it works</a></li>
+            <li><a href="index.html#use-cases">Applications</a></li>
+            <li><a href="index.html#contact">Contacts</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a class="btn btn-outline" href="signin.html">Sign In</a>
+            <a class="btn btn-primary" href="signup.html">Sign Up</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="create-pincs-main">
+      <div class="create-pincs-layout">
+        <!-- Left: Interactive Map -->
+        <section class="map-section" aria-label="Interactive map">
+          <div id="map" class="map-container" role="application" aria-label="Map to select location"></div>
+          <div class="map-placeholder" id="map-placeholder">
+            <div class="map-pin-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="64" height="64">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+              </svg>
+            </div>
+            <p class="map-label">Interactive Map</p>
+            <p class="map-hint">Click anywhere on the map to pin a location</p>
+          </div>
+        </section>
+
+        <!-- Right: Form Panel -->
+        <aside class="form-panel">
+          <div class="form-panel-inner">
+            <header class="form-panel-header">
+              <span class="form-panel-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+              </span>
+              <h1 class="form-panel-title">Create PINCS</h1>
+            </header>
+            <p class="form-panel-desc">
+              Enter an address or select a location on the map to generate your unique code.
+            </p>
+
+            <form class="create-pincs-form" id="create-pincs-form" novalidate>
+              <div class="field">
+                <label for="search-address">Search Address</label>
+                <div class="search-row">
+                  <input
+                    id="search-address"
+                    name="searchAddress"
+                    type="text"
+                    placeholder="e.g. 142 Rajiv Gandhi Nagar, Hyd"
+                    autocomplete="street-address"
+                  />
+                  <button type="button" class="btn-search" id="btn-search" aria-label="Search address">
+                    Search
+                  </button>
+                </div>
+              </div>
+
+              <div class="divider-text">
+                <span>or</span>
+              </div>
+
+              <button type="button" class="btn-select-map" id="btn-select-map" aria-label="Select location on map">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Select on Map
+              </button>
+
+              <div class="field">
+                <label for="city-area">City / Area</label>
+                <input id="city-area" name="cityArea" type="text" placeholder="e.g. Hyderabad" value="Hyderabad" />
+              </div>
+
+              <div class="field">
+                <label for="state">State</label>
+                <input id="state" name="state" type="text" placeholder="e.g. Telangana" value="Telangana" />
+              </div>
+
+              <div class="field">
+                <label for="pincode">Pincode</label>
+                <input id="pincode" name="pincode" type="text" placeholder="e.g. 500072" value="500072" inputmode="numeric" pattern="[0-9]{6}" />
+              </div>
+
+              <button type="submit" class="btn-generate" id="btn-generate">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                Generate PINCS Code
+              </button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="create-pincs.js"></script>
+  </body>
+</html>
