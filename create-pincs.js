@@ -27,7 +27,6 @@
   const createForm = document.getElementById("create-pincs-form");
   const btnSearch = document.getElementById("btn-search");
   const btnSelectMap = document.getElementById("btn-select-map");
-  const btnGenerate = document.getElementById("btn-generate");
   const searchInput = document.getElementById("search-address");
   const cityInput = document.getElementById("city-area");
   const stateInput = document.getElementById("state");
@@ -83,62 +82,16 @@
     if (mapPlaceholder) mapPlaceholder.classList.remove("is-hidden");
   }
 
-  // Reverse geocode (placeholder - use Nominatim or your backend in production)
-  function updateFormFromCoords(lat, lng) {
-    fetch(
-      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
-      { headers: { Accept: "application/json" } }
-    )
-      .then((r) => r.json())
-      .then((data) => {
-        if (data && data.address) {
-          const a = data.address;
-          if (a.city) cityInput.value = a.city;
-          else if (a.town) cityInput.value = a.town;
-          else if (a.village) cityInput.value = a.village;
-          if (a.state) stateInput.value = a.state;
-          if (a.postcode) pincodeInput.value = String(a.postcode).slice(0, 6);
-        }
-      })
-      .catch(() => {});
-  }
+  // No backend: map click only updates marker; user enters address manually
+  function updateFormFromCoords(/* lat, lng */) {}
 
-  // Search address (Nominatim geocoding)
+  // No backend: address search disabled; user selects on map or enters details manually
   function handleSearch() {
-    const query = searchInput.value.trim();
-    if (!query) {
-      searchInput.focus();
-      searchInput.setAttribute("aria-invalid", "true");
-      return;
-    }
     searchInput.removeAttribute("aria-invalid");
-
-    btnSearch.disabled = true;
-    btnSearch.textContent = "Searching…";
-
-    fetch(
-      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1`,
-      { headers: { Accept: "application/json" } }
-    )
-      .then((r) => r.json())
-      .then((results) => {
-        if (results && results[0]) {
-          const { lat, lon } = results[0];
-          const latNum = parseFloat(lat);
-          const lngNum = parseFloat(lon);
-          if (map) {
-            map.setView([latNum, lngNum], 16);
-            setMarker(latNum, lngNum, createRedIcon());
-            updateFormFromCoords(latNum, lngNum);
-            hidePlaceholder();
-          }
-        }
-      })
-      .catch(() => {})
-      .finally(() => {
-        btnSearch.disabled = false;
-        btnSearch.textContent = "Search";
-      });
+    if (mapEl) {
+      mapEl.focus();
+      mapEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   }
 
   function handleSelectOnMap() {
@@ -177,21 +130,7 @@
 
   function handleGenerate(e) {
     e.preventDefault();
-    if (!validateForm()) {
-      return;
-    }
-    btnGenerate.disabled = true;
-    btnGenerate.innerHTML =
-      '<span class="btn-loading" aria-hidden="true"></span> Generating…';
-
-    // Placeholder: simulate PINCS generation (replace with your API in production)
-    setTimeout(function () {
-      const mockCode = "PINCS-" + Math.random().toString(36).slice(2, 10).toUpperCase();
-      alert("Your PINCS Code: " + mockCode + "\n\n(Replace this with your actual PINCS generation API)");
-      btnGenerate.disabled = false;
-      btnGenerate.innerHTML =
-        '<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Generate PINCS Code';
-    }, 800);
+    validateForm();
   }
 
   function bindEvents() {
