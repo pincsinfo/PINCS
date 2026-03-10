@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="title desc">
+  <title id="title">Family PIN Sharing</title>
+  <desc id="desc">Linked family profiles with shared PIN and live sync badge.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef3ff"/>
+      <stop offset="100%" stop-color="#dfe9ff"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3d5ed9"/>
+      <stop offset="100%" stop-color="#5577ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <rect x="74" y="84" width="652" height="312" rx="20" fill="#ffffff" opacity="0.92"/>
+  <circle cx="222" cy="188" r="52" fill="#f5f8ff" stroke="#b6c8fb" stroke-width="3"/>
+  <circle cx="222" cy="172" r="16" fill="#e72f2f"/>
+  <rect x="194" y="196" width="56" height="30" rx="15" fill="#e72f2f"/>
+  <circle cx="580" cy="188" r="52" fill="#f5f8ff" stroke="#b6c8fb" stroke-width="3"/>
+  <circle cx="580" cy="172" r="16" fill="#e72f2f"/>
+  <rect x="552" y="196" width="56" height="30" rx="15" fill="#e72f2f"/>
+  <circle cx="402" cy="126" r="54" fill="#f5f8ff" stroke="#b6c8fb" stroke-width="3"/>
+  <circle cx="402" cy="110" r="16" fill="#e72f2f"/>
+  <rect x="374" y="134" width="56" height="30" rx="15" fill="#e72f2f"/>
+  <path d="M270 183c40-28 73-44 108-52M534 183c-40-28-73-44-108-52M258 224c51 35 102 54 144 61M546 224c-51 35-102 54-144 61" fill="none" stroke="#8ca6f4" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="336" cy="152" r="7" fill="#4f72e6"/>
+  <circle cx="468" cy="152" r="7" fill="#4f72e6"/>
+  <circle cx="322" cy="266" r="7" fill="#4f72e6"/>
+  <circle cx="482" cy="266" r="7" fill="#4f72e6"/>
+  <rect x="262" y="302" width="284" height="84" rx="20" fill="url(#chip)"/>
+  <text x="292" y="340" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#d9e5ff">Family Shared PIN</text>
+  <text x="292" y="370" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">CHAI789-A</text>
+  <rect x="560" y="320" width="124" height="28" rx="14" fill="#dbe7ff"/>
+  <text x="579" y="339" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#3d5ed9">Live Sync</text>
+</svg>
